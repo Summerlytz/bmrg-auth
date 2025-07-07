@@ -1,0 +1,2 @@
+# Keep our Discord customisations during merges
+packages/better-auth/src/social-providers/discord.ts merge=ours
