@@ -22,13 +22,15 @@
   </p>
 </p>
 
+---
 
+⚠️ **Important Notice:** This is a **customised fork** of Better Auth.  
+This version removes the `email` scope from the Discord OAuth implementation. If your application requires access to users' email addresses via Discord OAuth, **do not use this package**. Refer to the [official Better Auth repository](https://github.com/better-auth/better-auth) for the unmodified version.
 
+---
 
 ## Getting Started
 
 ```bash
-pnpm install better-auth
+pnpm install @summerlytz/better-auth
 ```
-
-Read the [Installation Guide](https://better-auth.com/docs/installation) to learn more.
