@@ -82,7 +82,7 @@ export const discord = (options: DiscordOptions) => {
 		id: "discord",
 		name: "Discord",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
-			const _scopes = options.disableDefaultScope ? [] : ["identify", "email"];
+			const _scopes = options.disableDefaultScope ? [] : ["identify"];
 			scopes && _scopes.push(...scopes);
 			options.scope && _scopes.push(...options.scope);
 			return new URL(
@@ -147,8 +147,8 @@ export const discord = (options: DiscordOptions) => {
 				user: {
 					id: profile.id,
 					name: profile.global_name || profile.username || "",
-					email: profile.email,
-					emailVerified: profile.verified,
+					email: `user_${profile.id}@bmrg.app`,
+					emailVerified: true,
 					image: profile.image_url,
 					...userMap,
 				},
